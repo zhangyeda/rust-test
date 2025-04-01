@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [ "*" ]
+  pull_request:
+    branches: [ "*" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. 检出项目代码
+      - uses: actions/checkout@v3
+
+      # 2. 安装 Rust (stable 版本)
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      # 3. 编译项目
+      - name: Build
+        run: cargo build --verbose
+
+      # 4. 运行测试
+      - name: Run tests
+        run: cargo test --verbose
