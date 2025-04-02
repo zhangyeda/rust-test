@@ -3,4 +3,18 @@ name = "rust-demo"
 version = "0.1.0"
 edition = "2024"
 
+[[bin]]
+name = "question6"
+path = "src/question6.rs"
+
 [dependencies]
+anyhow = "1.0"
+clap = { version = "4.4", features = ["derive"] }
+walkdir = "2.4"
+regex = "1.10"
+crossbeam-channel = "0.5.12"
+
+[dev-dependencies]
+assert_cmd = "2.0"
+predicates = "3.0"
+tempfile = "3.10"

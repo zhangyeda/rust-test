@@ -2,6 +2,8 @@ mod question1;
 mod question2;
 mod question3;
 mod question4;
+mod question5;
+mod question6;
 
 fn main() {
     println!("Hello, world!");
